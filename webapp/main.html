@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
         
     </head>
@@ -23,6 +24,48 @@
                                    <img src="img/mccard.png" alt="" class="img-fluid"/>
                                </div>
                                <div class="col-6">
+                                   <div id="card_details">
+                                       <div class="row">
+                                           <div class="col-12">
+                                               <b>Card name :</b>
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12 text-right">
+                                               PetarMastercard3456
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12">
+                                               <b>Bank account number :</b>
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12 text-right">
+                                               275-00000000000-27
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12">
+                                               <b>Card number :</b>
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12 text-right">
+                                               5412 75** **** 3456
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12">
+                                               <b>Expiration date :</b>
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12 text-right">
+                                                01/20
+                                           </div>
+                                       </div>                                       
+                                   </div>
                                </div>
                            </div>
                            <div class="row">
@@ -40,12 +83,33 @@
                                   </div>
                                </div>
                                <div class="col-6">
+                                   <div class="row">
+                                           <div class="col-7">
+                                               Account balance :
+                                           </div>
+                                           <div class="col-5 text-right">
+                                               2500.00 RSD 
+                                           </div>
+                                       </div>
                                </div>
                            </div>
                        </div>
                 </div>
                 <div class="col-sm-4">
                        <div id="client_view">
+                           <div id="person-s">
+                                <div id="person-header-s">
+                                    <i class="fa fa-user"></i> Petar Petrovic
+                                </div>
+                               <div id="person-picture-s" class="text-center">
+                                   <img src="img/person.png" alt="" height="190px"/>
+                                </div>
+                                <div id="person-footer-s">
+                                    <button type="button" class="btn btn-outline-warning btn-sm">Reset password</button>
+                                    <button type="button" class="btn btn-outline-warning btn-sm">Account settings</button>
+                                    <button type="button" class="btn btn-outline-warning btn-sm">Logout</button>
+                                </div>
+                            </div>
                        </div>
                 </div>
           </div>
@@ -53,26 +117,54 @@
          <div class="container">  
           <div class="row">
             <div class="col-sm">
-            <div id="content-header-s">
-                <p>Card configuration</p>
-            </div>
-            
+                <div id="content-s">
+                    <div id="content-header-s">
+                        <i class="fa fa-cc-mastercard"></i> Card configuration
+                    </div>
+                    <div id="content-body-s">
+                        <p>Card configuration</p>
+                    </div>
+                    <div id="content-footer-s">
+                        <p>Use same configuration for all cards</p>
+                    </div>
+                </div>
             </div>
               <div class="col-sm">
-                  <div class="alert alert-success" role="alert">
-                    <h6 class="alert-heading">Service configuration</h6>
-                  </div>
+                  <div id="content-s">
+                    <div id="content-header-s">
+                        <i class="fa fa-info-circle"></i> Service configuration
+                    </div>
+                    <div id="content-body-s">
+                        <p>Service</p>
+                    </div>
+                      <div id="content-footer-s">
+                        <p>Last added service : Gaming</p>
+                    </div>
+                </div>
               </div>
             <div class="col-sm">
-                <div class="alert alert-success" role="alert">
-                    <h6 class="alert-heading">Notifications</h6>
-                  </div>
+                <div id="content-s">
+                    <div id="content-header-s">
+                        <i class="fa fa-bullhorn"></i> Notifications
+                    </div>
+                    <div id="content-body-s">
+                        <p>Notification</p>
+                    </div>
+                </div>
+                <div id="content-s">
+                    <div id="content-header-s">
+                        <i class="fa fa-comments"></i> Customer feedback
+                    </div>
+                    <div id="content-body-s">
+                        <p>Notification</p>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
-        
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+      
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     </body>
 </html>
 
