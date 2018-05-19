@@ -32,13 +32,13 @@
         android:layout_marginLeft="10dp"
         />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/grey"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"/>
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/grey"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginLeft="10dp"/>-->
 
     <TextView
         android:id="@+id/tvInstantCashCredit"

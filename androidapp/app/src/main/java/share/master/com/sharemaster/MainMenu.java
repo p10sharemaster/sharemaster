@@ -98,13 +98,13 @@ public class MainMenu extends AppCompatActivity {
             switch (status)
            {
                case 1:
-                   tvAmount.setText("1,500.00 EUR");
+                   tvAmount.setText("1,000.00 EUR");
                    break;
                case 2:
                    tvAmount.setText("2,500.00 EUR");
                    break;
                case 3:
-                   tvAmount.setText("0 EUR");
+                   tvAmount.setText("3,500.00 EUR");
                    break;
                default:
                    break;
@@ -126,14 +126,12 @@ public class MainMenu extends AppCompatActivity {
                         finish();
                         break;
                     case 2:
-                        tvAmount.setText("2,500.00 EUR");
+                        openAlertDialog();
                         break;
                     case 3:
-                        tvAmount.setText("3,500.00 EUR");
+                        openAlertDialog();
                         break;
-                    case 4:
-                        tvAmount.setText("0 EUR");
-                        break;
+
                     default:
                         break;
 
@@ -202,10 +200,10 @@ public class MainMenu extends AppCompatActivity {
                 switch (groupPosition) {
 
                     case 0:
-                       // Toast.makeText(context, "Money transfer", Toast.LENGTH_LONG).show();
+
                         break;
                     case 1:
-                        //Toast.makeText(context, "Instant cash", Toast.LENGTH_LONG).show();
+
                         break;
                     case 2:
 
@@ -255,6 +253,40 @@ public class MainMenu extends AppCompatActivity {
                 //endregion
             }
         });
+
+    }
+
+    private void openAlertDialog()
+    {
+
+            final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(MainMenu.this);
+            LayoutInflater inflater = this.getLayoutInflater();
+            View dialogView = inflater.inflate(R.layout.alert_dialog_payment_successfull, null);
+
+            dialogBuilder.setView(dialogView);
+
+            final AlertDialog alertDialog = dialogBuilder.create();
+
+            ImageButton ibSuccess = dialogView.findViewById(R.id.ibSuccess);
+            ibSuccess.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    alertDialog.cancel();
+
+                    if(status == 2)
+                        tvAmount.setText("0 EUR");
+                    else
+                        tvAmount.setText("1,000.00 EUR");
+
+
+                }
+            });
+
+            dialogBuilder.setCancelable(true);
+
+            alertDialog.show();
+
 
     }
 

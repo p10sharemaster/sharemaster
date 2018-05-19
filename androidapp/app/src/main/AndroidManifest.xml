@@ -32,8 +32,8 @@
         <activity
             android:name=".Cupons"
             android:screenOrientation="portrait" />
-        <activity android:name=".AuthoriseYourCard" />
-        <activity android:name=".UnsuccessfulPayment"></activity>
+        <activity android:name=".AuthoriseYourCard"   android:screenOrientation="portrait"/>
+        <activity android:name=".UnsuccessfulPayment"  android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

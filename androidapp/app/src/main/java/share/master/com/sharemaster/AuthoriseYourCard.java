@@ -116,16 +116,18 @@ public class AuthoriseYourCard extends AppCompatActivity {
                         Intent mainMenu = new Intent(AuthoriseYourCard.this, MainMenu.class);
                         mainMenu.putExtra("STATUS", 1);
                         startActivity(mainMenu);
+                        finish();
                     }
                     else
                     {
                         Intent unsuccessful = new Intent(AuthoriseYourCard.this, UnsuccessfulPayment.class);
                         startActivity(unsuccessful);
+                        finish();
 
                         //status = 2;
                     }
 
-                    finish();
+
                 }
             });
 

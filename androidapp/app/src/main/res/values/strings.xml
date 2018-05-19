@@ -4,8 +4,8 @@
     <string name="open_account">Open new Account</string>
     <string name="enroll_card">Enroll card</string>
     <string name="main_menu">Main menu</string>
-    <string name="set_card">Ukoliko imaš otvoren tekući račun prisloni karticu na telefon kako bi je povezao sa nalogom.</string>
-    <string name="open_account_description">Ukoliko nemaš tekući račun možeš ga otvoriti klikom na dugme OTVORI TEKUĆI RAČUN.</string>
+    <string name="set_card">Just put your Master credit card on a back of a phone to enroll it.</string>
+    <string name="open_account_description">If you do not have a Master card open a new account in a few steps.</string>
     <string name="back">Nazad</string>
     <string name="logo">Share Master</string>
     <string name="nfc_disabled">NFC is disabled.</string>
