@@ -11,4 +11,7 @@
     <string name="nfc_disabled">NFC is disabled.</string>
     <string name="empty_string"> </string>
     <string name="card">Card</string>
+    <string name="enter_PIN">Enter PIN number you got on your cell phone number</string>
+    <string name="use_finger">Or use your finger to authenticate yourself.</string>
+    <string name="yes">CONFIRM PIN</string>
 </resources>

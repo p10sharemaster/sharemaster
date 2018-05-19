@@ -28,6 +28,9 @@ import java.util.List;
 
 public class MainMenu extends AppCompatActivity {
 
+    TextView tvAmount;
+    ImageButton ibCard;
+
 
     Context context;
 
@@ -49,6 +52,7 @@ public class MainMenu extends AppCompatActivity {
             };
 
 
+    int status = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,18 +75,45 @@ public class MainMenu extends AppCompatActivity {
             iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_launcher));
 
             ImageButton btnBack = mCustomView.findViewById(R.id.btnBack);
-            btnBack.setVisibility(View.GONE);
-
-
-            expListView = (ExpandableListView) findViewById(R.id.lvExp);
-            prepareListData();
-            listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild, imageIdAdditionalBenefits, true);
-            // setting list adapter
-            expListView.setAdapter(listAdapter);
-
-            setListenersForAdditionalBenefits();
+            btnBack.setVisibility(View.INVISIBLE);
 
         }
+
+        tvAmount = findViewById(R.id.tvAmount);
+
+        expListView = (ExpandableListView) findViewById(R.id.lvExp);
+        prepareListData();
+        listAdapter = new ExpandableListAdapter(context, listDataHeader, listDataChild, imageIdAdditionalBenefits, true);
+        // setting list adapter
+        expListView.setAdapter(listAdapter);
+
+        setListenersForAdditionalBenefits();
+
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if (extras != null) {
+           status = intent.getIntExtra("STATUS", 1);
+
+            switch (status)
+           {
+               case 1:
+                   tvAmount.setText("1,500.00 EUR");
+                   break;
+               case 2:
+                   tvAmount.setText("2,500.00 EUR");
+                   break;
+               case 3:
+                   tvAmount.setText("0 EUR");
+                   break;
+               default:
+                   break;
+
+           }
+        }
+
+        ibCard= findViewById(R.id.ibCard);
+        ibCard.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.card_3));
     }
 
     /*
@@ -145,10 +176,10 @@ public class MainMenu extends AppCompatActivity {
                 switch (groupPosition) {
 
                     case 0:
-                        Toast.makeText(context, "Money transfer", Toast.LENGTH_LONG).show();
+                       // Toast.makeText(context, "Money transfer", Toast.LENGTH_LONG).show();
                         break;
                     case 1:
-                        Toast.makeText(context, "Instant cash", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(context, "Instant cash", Toast.LENGTH_LONG).show();
                         break;
                     case 2:
 

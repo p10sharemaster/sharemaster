@@ -17,29 +17,22 @@
         android:roundIcon="@mipmap/ic_share_master"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EnrollCard">
+        <activity
+            android:name=".EnrollCard"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <service -->
-        <!-- android:name=".HostCardEmulatorService" -->
-        <!-- android:exported="true" -->
-        <!-- android:permission="android.permission.BIND_NFC_SERVICE"> -->
-        <!-- <intent-filter> -->
-        <!-- <action -->
-        <!-- android:name="android.nfc.cardemulation.action.HOST_APDU_SER -->
-        <!-- VICE" /> -->
-        <!-- </intent-filter> -->
-        <!-- <meta-data -->
-        <!-- android:name="android.nfc.cardemulation.host_apdu_service" -->
-        <!-- android:resource="@xml/apduservice" /> -->
-        <!-- </service> -->
-
-        <activity android:name=".MainMenu" />
-        <activity android:name=".Cupons"></activity>
+        <activity
+            android:name=".MainMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Cupons"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AuthoriseYourCard"></activity>
     </application>
 
 </manifest>

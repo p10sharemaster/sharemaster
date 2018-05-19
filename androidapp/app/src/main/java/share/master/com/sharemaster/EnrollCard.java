@@ -55,8 +55,11 @@ public class EnrollCard extends AppCompatActivity {
             TextView tv = mCustomView.findViewById(R.id.tvShareMaster);
             tv.setGravity(Gravity.CENTER);
             //Here do whatever you need to do with the view (set text if it's a textview or whatever)
-        //    ImageView iv = mCustomView.findViewById(R.id.ivLogo);
-           // iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_share_master_square));
+//            ImageView iv = mCustomView.findViewById(R.id.ivLogo);
+//            iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_share_master_square));
+//            iv.setVisibility(View.GONE);
+
+
         }
 
         resolveIntent(getIntent());
@@ -151,9 +154,9 @@ public class EnrollCard extends AppCompatActivity {
                 || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action))
         {
             Log.d(TAG, "Card has been discovered." );
-            Toast.makeText(this, "Card has been discovered", Toast.LENGTH_LONG).show();
-            Intent mainMenu = new Intent(EnrollCard.this, MainMenu.class);
-            startActivity(mainMenu);
+          //  Toast.makeText(this, "Card has been discovered", Toast.LENGTH_LONG).show();
+            Intent autorise = new Intent(EnrollCard.this, AuthoriseYourCard.class);
+            startActivity(autorise);
 //
 //            Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 //            NdefMessage[] msgs;
