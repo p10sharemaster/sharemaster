@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">ShareMaster</string>
     <string name="app_name_with_color">Share Master</string>
-    <string name="open_account">Otvori tekući račun</string>
-    <string name="enroll_card">Prisloni karticu</string>
+    <string name="open_account">Open new Account</string>
+    <string name="enroll_card">Enroll card</string>
     <string name="main_menu">Main menu</string>
     <string name="set_card">Ukoliko imaš otvoren tekući račun prisloni karticu na telefon kako bi je povezao sa nalogom.</string>
     <string name="open_account_description">Ukoliko nemaš tekući račun možeš ga otvoriti klikom na dugme OTVORI TEKUĆI RAČUN.</string>

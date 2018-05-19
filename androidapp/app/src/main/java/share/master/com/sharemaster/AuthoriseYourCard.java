@@ -1,5 +1,6 @@
 package share.master.com.sharemaster;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ public class AuthoriseYourCard extends AppCompatActivity {
     EditText etPIN;
     Context context;
 
+    int status = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +59,7 @@ public class AuthoriseYourCard extends AppCompatActivity {
             public void onClick(View v) {
                 if(etPIN.getText().length() >0)
                 {
-                    Intent mainMenu = new Intent(AuthoriseYourCard.this, MainMenu.class);
-                    mainMenu.putExtra("STATUS", 1);
-                    startActivity(mainMenu);
-                    finish();
+                    openAlertDialog();
                 }
                 else
                 {
@@ -67,5 +67,80 @@ public class AuthoriseYourCard extends AppCompatActivity {
                 }
             }
         });
+
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if (extras != null) {
+            status = intent.getIntExtra("AUTHORISE", 1);
+//
+//            switch (status)
+//            {
+//                case 1:
+//
+//                    break;
+//                case 2:
+//
+//                    break;
+//                case 3:
+//
+//                    break;
+//                default:
+//                    break;
+//
+//            }
+        }
     }
+
+
+    private void openAlertDialog()
+    {
+        if(status == 1)
+        {
+            final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(AuthoriseYourCard.this);
+            LayoutInflater inflater = this.getLayoutInflater();
+            View dialogView = inflater.inflate(R.layout.alert_dialog_authorisation_successfull, null);
+
+            dialogBuilder.setView(dialogView);
+
+            final AlertDialog alertDialog = dialogBuilder.create();
+
+            ImageButton ibSuccess = dialogView.findViewById(R.id.ibSuccess);
+            ibSuccess.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    alertDialog.cancel();
+                    if(status == 1)
+                    {
+                        Intent mainMenu = new Intent(AuthoriseYourCard.this, MainMenu.class);
+                        mainMenu.putExtra("STATUS", 1);
+                        startActivity(mainMenu);
+                    }
+                    else
+                    {
+                        Intent unsuccessful = new Intent(AuthoriseYourCard.this, UnsuccessfulPayment.class);
+                        startActivity(unsuccessful);
+
+                        //status = 2;
+                    }
+
+                    finish();
+                }
+            });
+
+            dialogBuilder.setCancelable(true);
+
+            alertDialog.show();
+
+        }
+        else
+        {
+            Intent unsuccessful = new Intent(AuthoriseYourCard.this, UnsuccessfulPayment.class);
+            startActivity(unsuccessful);
+            finish();
+        }
+
+    }
+
 }

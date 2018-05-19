@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/main_bg"
+    tools:context=".UnsuccessfulPayment"
+     android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unsuccessful payment"
+        android:textSize="20sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tvReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There are not enough funds in your account to cover check."
+        android:textColor="@color/black"
+        android:paddingTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvInstantCashCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="30dp"
+        android:text="Do you want Instant cash credit?"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnFirstChoice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_orange"
+        android:contentDescription="@string/set_card"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="1,500.00 EUR"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnSecondChoice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_orange"
+        android:contentDescription="@string/set_card"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="2,500.00 EUR"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_gray"
+        android:contentDescription="@string/set_card"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="CANCEL"
+        android:textColor="@color/white" />
+
+</LinearLayout>

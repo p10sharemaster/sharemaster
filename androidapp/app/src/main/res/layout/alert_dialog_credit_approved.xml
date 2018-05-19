@@ -28,8 +28,8 @@
 
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:id="@+id/txtImei"
-                    android:text="PAYMENT"
+                    android:id="@+id/tvTitle"
+                    android:text="INSTANT CASH CREDIT"
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:layout_gravity="center"
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="Payment was successfull."
+                    android:text="Your credit has been approved."
                     android:textSize="20sp"
                     android:textColor="@color/black"/>
             </TableRow>
@@ -67,7 +67,7 @@
                     android:layout_height="50dp"
                     android:src="@drawable/success"
                     android:background="@color/transparent"
-                    android:contentDescription="Payment was successfull."/>
+                    android:contentDescription="Your credit has been approved."/>
             </TableRow>
 
         </TableLayout>

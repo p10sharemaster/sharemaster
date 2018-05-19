@@ -155,8 +155,11 @@ public class EnrollCard extends AppCompatActivity {
         {
             Log.d(TAG, "Card has been discovered." );
           //  Toast.makeText(this, "Card has been discovered", Toast.LENGTH_LONG).show();
-            Intent autorise = new Intent(EnrollCard.this, AuthoriseYourCard.class);
-            startActivity(autorise);
+
+            Intent authorise = new Intent(EnrollCard.this, AuthoriseYourCard.class);
+            authorise.putExtra("AUTORISE", 1);
+            startActivity(authorise);
+            finish();
 //
 //            Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 //            NdefMessage[] msgs;

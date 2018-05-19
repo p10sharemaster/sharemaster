@@ -114,6 +114,32 @@ public class MainMenu extends AppCompatActivity {
 
         ibCard= findViewById(R.id.ibCard);
         ibCard.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.card_3));
+        ibCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (status)
+                {
+                    case 1:
+                        Intent authorise = new Intent(MainMenu.this,AuthoriseYourCard.class);
+                        authorise.putExtra("AUTHORISE", 2);
+                        startActivity(authorise);
+                        finish();
+                        break;
+                    case 2:
+                        tvAmount.setText("2,500.00 EUR");
+                        break;
+                    case 3:
+                        tvAmount.setText("3,500.00 EUR");
+                        break;
+                    case 4:
+                        tvAmount.setText("0 EUR");
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+        });
     }
 
     /*
@@ -187,6 +213,7 @@ public class MainMenu extends AppCompatActivity {
                     case 3:
                         Intent cupons = new Intent(MainMenu.this, Cupons.class);
                         startActivity(cupons);
+                        finish();
                         break;
                     default:
                         break;
