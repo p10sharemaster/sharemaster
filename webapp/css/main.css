@@ -1,0 +1,35 @@
+body
+{
+    font-family: 'Axiforma Medium', sans-serif;
+    font-size: 20px;
+    background-image: url("../img/bg/prelogin_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+
+@font-face {
+  font-family: Axiforma Extrabold;
+  src: url(../font/Axiforma-ExtraBold.eot), url(../font/Axiforma-ExtraBold.otf), url(../font/Axiforma-ExtraBold.svg), url(../font/Axiforma-ExtraBold.ttf), url(../font/Axiforma-ExtraBold.woff); }
+
+@font-face {
+  font-family: Axiforma Light;
+  src: url(../font/Axiforma-Light.eot), url(../font/Axiforma-Light.otf), url(../font/Axiforma-Light.svg), url(../font/Axiforma-Light.ttf), url(../font/Axiforma-Light.woff); }
+
+@font-face {
+  font-family: Axiforma Medium;
+  src: url(../font/Axiforma-Medium.eot), url(../font/Axiforma-Medium.otf), url(../font/Axiforma-Medium.svg), url(../font/Axiforma-Medium.ttf), url(../font/Axiforma-Medium.woff); }
+
+@font-face {
+  font-family: Axiforma Semibold;
+  src: url(../font/Axiforma-SemiBold.eot), url(../font/Axiforma-SemiBold.otf), url(../font/Axiforma-SemiBold.svg), url(../font/Axiforma-SemiBold.ttf), url(../font/Axiforma-SemiBold.woff); }
+
+@font-face {
+  font-family: Axiforma Thin;
+  src: url(../font/Axiforma-Thin.eot), url(../font/Axiforma-Thin.otf), url(../font/Axiforma-Thin.svg), url(../font/Axiforma-Thin.ttf), url(../font/Axiforma-Thin.woff); }
+
+@font-face {
+  font-family: Axiforma Regular;
+  src: url(../font/Axiforma-Regular.eot), url(../font/Axiforma-Regular.otf), url(../font/Axiforma-Regular.svg), url(../font/Axiforma-Regular.ttf), url(../font/Axiforma-Regular.woff); }
+
