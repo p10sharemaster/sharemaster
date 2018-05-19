@@ -11,10 +11,7 @@ switch($_SERVER['REQUEST_METHOD'])
             $jv = json_validate($jsonRequest);
             if( $jv == 0)
             {
-                WriteToLog("Json input",$jsonRequest);
-                $requestClass = new RequestData($jsonRequest);
-
-                echo $requestClass->warrantProceed();
+                echo "#";
             }
             else
             {
@@ -35,4 +32,3 @@ switch($_SERVER['REQUEST_METHOD'])
 
 
 ?>
-
