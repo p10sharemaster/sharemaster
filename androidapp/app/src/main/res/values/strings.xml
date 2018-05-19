@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ShareMaster</string>
+    <string name="open_account">Otvori tekući račun</string>
+    <string name="enroll_card">Prisloni karticu</string>
+    <string name="set_card">Ukoliko imaš otvoren tekući račun prisloni karticu na telefon kako bi je povezao sa nalogom.</string>
+    <string name="open_account_description">Ukoliko nemaš tekući račun možeš ga otvoriti klikom na dugme OTVORI TEKUĆI RAČUN.</string>
+    <string name="back">Nazad</string>
+    <string name="logo">Share Master</string>
+    <string name="servicedesc">APDU Servis</string>
+    <string name="aiddescription">aid</string>
+    <string name="nfc_disabled">NFC is disabled.</string>
+
+</resources>

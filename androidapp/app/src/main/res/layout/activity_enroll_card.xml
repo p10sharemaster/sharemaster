@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="match_parent"
+    tools:context=".EnrollCard">
+
+
+    <TextView
+        android:id="@+id/tvSetUpCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/set_card"
+        android:textColor="@color/black"
+        android:paddingTop="30dp"
+      />
+
+    <Button
+        android:id="@+id/btnEnrollCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSetUpCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button"
+        android:contentDescription="@string/set_card"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/enroll_card"
+        android:textColor="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/ivCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        android:layout_below="@+id/btnEnrollCard"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:srcCompat="@drawable/card"
+        android:contentDescription="@string/set_card" />
+
+    <TextView
+        android:id="@+id/tvOpenAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_account_description"
+        android:textColor="@color/black"
+        android:paddingTop="15dp"
+        android:layout_below="@id/ivCard"
+        />
+
+
+    <Button
+        android:id="@+id/btnOpenAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_account"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvOpenAccount"
+        android:background="@drawable/button_orange"
+        android:contentDescription="@string/open_account"
+        android:textColor="@color/black"
+        android:paddingRight="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"/>
+
+
+
+</RelativeLayout>
