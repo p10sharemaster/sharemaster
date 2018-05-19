@@ -37,7 +37,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="paddingPercent" value="-5" />
+                                                <entry key="paddingPercent" value="45" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -48,9 +48,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="imageAsset" value="D:\ANA\Projects\Hackathon\androidapp\app\src\main\res\drawable\logo.png" />
-                                      <entry key="outputName" value="ic_share_master_circle" />
+                                      <entry key="cropped" value="true" />
+                                      <entry key="iconShape" value="NONE" />
+                                      <entry key="imageAsset" value="D:\ANA\Projects\Hackathon\androidapp\app\src\main\res\drawable\logo_big.png" />
+                                      <entry key="outputName" value="ic_share_master" />
                                     </map>
                                   </option>
                                 </PersistentState>

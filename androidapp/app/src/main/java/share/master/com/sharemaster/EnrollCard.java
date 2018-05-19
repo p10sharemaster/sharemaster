@@ -16,10 +16,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -50,9 +52,11 @@ public class EnrollCard extends AppCompatActivity {
             mActionBar.setCustomView(mCustomView);
             mActionBar.setDisplayShowCustomEnabled(true);
 
+            TextView tv = mCustomView.findViewById(R.id.tvShareMaster);
+            tv.setGravity(Gravity.CENTER);
             //Here do whatever you need to do with the view (set text if it's a textview or whatever)
-            ImageView iv = mCustomView.findViewById(R.id.ivLogo);
-            iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_share_master_square));
+        //    ImageView iv = mCustomView.findViewById(R.id.ivLogo);
+           // iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_share_master_square));
         }
 
         resolveIntent(getIntent());
@@ -148,22 +152,26 @@ public class EnrollCard extends AppCompatActivity {
         {
             Log.d(TAG, "Card has been discovered." );
             Toast.makeText(this, "Card has been discovered", Toast.LENGTH_LONG).show();
-            Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
-            NdefMessage[] msgs;
-            if (rawMsgs != null)
-            {
-                msgs = new NdefMessage[rawMsgs.length];
-                for (int i = 0; i < rawMsgs.length; i++)
-                {
-                    msgs[i] = (NdefMessage) rawMsgs[i];
-                }
-            }
-            else
-            {
-                Parcelable tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-                //Citaju se podaci sa kartice i postavljaju se u tekstualno polje, postaju vidljivi dugmici Odustani i Fotografiši
-               // dumpTagData(tag);
-            }
+            Intent mainMenu = new Intent(EnrollCard.this, MainMenu.class);
+            startActivity(mainMenu);
+//
+//            Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
+//            NdefMessage[] msgs;
+//            if (rawMsgs != null)
+//            {
+//                msgs = new NdefMessage[rawMsgs.length];
+//                for (int i = 0; i < rawMsgs.length; i++)
+//                {
+//                    msgs[i] = (NdefMessage) rawMsgs[i];
+//                }
+//            }
+//            else
+//            {
+//                Parcelable tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+
+//                //Citaju se podaci sa kartice i postavljaju se u tekstualno po
+//                //               // dumpTagData(tag);
+//            }
         }
     }
 
