@@ -64,6 +64,7 @@ $selected_card_array=$db->SelectQueryArray($SQL_card_data);
         <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -121,6 +122,13 @@ $selected_card_array=$db->SelectQueryArray($SQL_card_data);
         </div>
       </footer>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    </body>
+      <script>
+        $('#cmbServiceSelection').change(function() {
+            var cardid = $(this).data('cardid'); 
+            window.location = 'main.php?serviceid=' + $(this).val() + '&cardid='+ cardid;;
+        });
+        </script>
+
+</body>
 </html>
 
