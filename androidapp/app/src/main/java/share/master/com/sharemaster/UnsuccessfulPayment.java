@@ -68,6 +68,7 @@ public class UnsuccessfulPayment extends AppCompatActivity {
                 Intent successful = new Intent(UnsuccessfulPayment.this, MainMenu.class);
                 successful.putExtra("STATUS",1);
                 startActivity(successful);
+                finish();
             }
         });
 

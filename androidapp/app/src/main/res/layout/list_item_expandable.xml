@@ -12,11 +12,12 @@
         android:paddingEnd="5dp"
         android:paddingStart="2dp"
         android:textSize="18sp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:gravity="end|start"
+        android:gravity="start|center_vertical"
+        android:textAlignment="viewStart"
         android:textColor="@color/black"
         />
 

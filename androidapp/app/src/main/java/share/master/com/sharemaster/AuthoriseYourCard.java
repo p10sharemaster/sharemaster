@@ -116,9 +116,9 @@ public class AuthoriseYourCard extends AppCompatActivity {
                     }
                     else
                     {
-                        Intent unsuccessful = new Intent(AuthoriseYourCard.this, UnsuccessfulPayment.class);
-                        startActivity(unsuccessful);
-                        finish();
+                       Intent processing = new Intent(AuthoriseYourCard.this, Processing.class);
+                       startActivity(processing);
+                       finish();
 
                         //status = 2;
                     }
@@ -162,9 +162,13 @@ public class AuthoriseYourCard extends AppCompatActivity {
         }
         else
         {
-            Intent unsuccessful = new Intent(AuthoriseYourCard.this, UnsuccessfulPayment.class);
-            startActivity(unsuccessful);
+            Intent processing = new Intent(AuthoriseYourCard.this, Processing.class);
+            startActivity(processing);
             finish();
+
+//            Intent unsuccessful = new Intent(AuthoriseYourCard.this, UnsuccessfulPayment.class);
+//            startActivity(unsuccessful);
+//            finish();
         }
 
     }

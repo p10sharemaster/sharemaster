@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="Payment was successfull."
+                    android:text="Payment was successful."
                     android:textSize="20sp"
                     android:textColor="@color/black"/>
             </TableRow>
@@ -67,7 +67,7 @@
                     android:layout_height="50dp"
                     android:src="@drawable/success"
                     android:background="@color/transparent"
-                    android:contentDescription="Payment was successfull."/>
+                    android:contentDescription="Payment was successful."/>
             </TableRow>
 
         </TableLayout>

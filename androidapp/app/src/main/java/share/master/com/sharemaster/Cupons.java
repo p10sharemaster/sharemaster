@@ -6,6 +6,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
@@ -75,4 +76,28 @@ public class Cupons extends AppCompatActivity {
 
         context = getApplicationContext();
     }
+
+
+    //endregion
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            callParentPage();
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+    /***
+     * Method that calls page before this - parent page. Can be call on button, onKeyDown or on menu item home.
+     */
+    private void callParentPage()
+    {
+        Intent goBack = new Intent(Cupons.this, MainMenu.class);
+        goBack.putExtra("STATUS", 1);
+        startActivity(goBack);
+        finish();
+    }
+
 }

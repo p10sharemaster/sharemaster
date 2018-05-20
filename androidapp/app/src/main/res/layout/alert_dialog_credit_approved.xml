@@ -50,9 +50,9 @@
                     android:id="@+id/tvDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:text="Your credit has been approved."
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/credit_approved"
                     android:textSize="20sp"
                     android:textColor="@color/black"/>
             </TableRow>

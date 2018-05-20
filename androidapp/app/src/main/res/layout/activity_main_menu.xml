@@ -35,7 +35,7 @@
             android:layout_width="0dp"
         android:id="@+id/tvAmountHeader"
         android:layout_height="wrap_content"
-        android:text="Account balance:"
+        android:text="@string/account_header"
         android:textSize="20sp"
         android:textColor="@color/white"/>
 

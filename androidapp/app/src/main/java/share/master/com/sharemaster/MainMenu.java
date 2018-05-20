@@ -156,14 +156,16 @@ public class MainMenu extends AppCompatActivity {
         List<String> emptyList = new ArrayList<>();
 
 
-        listDataHeader.add("Money transfer");
-        listDataHeader.add("Instant cash");
+        listDataHeader.add("Money Transfer");
+        listDataHeader.add("Instant Cash");
         listDataHeader.add("Services");
-        listDataHeader.add("Cupons");
+        listDataHeader.add("Coupons");
 
         List<String> header1List = new ArrayList<>();
         header1List.add("Taxi");
         header1List.add("Parking");
+        header1List.add("Ticketing");
+        header1List.add("ENP");
 
         listDataChild.put(listDataHeader.get(2), header1List); // Header, Child data
     }

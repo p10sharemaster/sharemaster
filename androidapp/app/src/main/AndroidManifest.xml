@@ -32,8 +32,13 @@
         <activity
             android:name=".Cupons"
             android:screenOrientation="portrait" />
-        <activity android:name=".AuthoriseYourCard"   android:screenOrientation="portrait"/>
-        <activity android:name=".UnsuccessfulPayment"  android:screenOrientation="portrait"/>
+        <activity
+            android:name=".AuthoriseYourCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UnsuccessfulPayment"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Processing" android:screenOrientation="portrait" />
     </application>
 
 </manifest>
