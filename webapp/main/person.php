@@ -1,7 +1,7 @@
 <div id="client_view">
                            <div id="person-s">
                                 <div id="person-header-s">
-                                    <i class="fa fa-user"></i> Petar Petrovic
+                                    <i class="fa fa-user"></i> <?php echo $_SESSION["SESS_NAME"];?>
                                 </div>
                                <div id="person-picture-s" class="text-center">
                                    <img src="img/person.png" alt="" height="190px"/>

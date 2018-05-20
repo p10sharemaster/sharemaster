@@ -11,7 +11,7 @@
                                 <div class="col-3 text-right">
                                     <div class="form-check checkbox-slider--b">
                                         <label>
-                                            <input type="checkbox" name="active-card" id="active-card" checked><span></span>
+                                            <input type="checkbox" name="active-card" id="active-loan" checked><span></span>
                                         </label>
                                     </div>
                                 </div>

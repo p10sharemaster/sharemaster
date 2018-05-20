@@ -1,3 +1,58 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["SESS_USERID"]))
+{
+    header("location: index.php");
+}
+
+include_once 'connection/database.php';
+$db = new dboperation();
+
+$SQL_getData = "SELECT
+card.cardname,
+card.cardnumber,
+card.balance,
+card.expdate,
+card.bankaccount,
+card.active,
+card.id
+FROM
+users
+INNER JOIN user_link_card ON user_link_card.user_id = users.id
+INNER JOIN card ON card.id = user_link_card.card_id
+WHERE
+users.id =".$_SESSION["SESS_USERID"];
+$card_array=$db->SelectQueryArray($SQL_getData);
+
+if(isset($_GET['cardid']))
+{
+    $cardid = $_GET['cardid'];
+}
+ else 
+{
+    $cardid=1;
+}
+
+$SQL_card_data = "SELECT
+card.cardname,
+card.cardnumber,
+card.balance,
+card.expdate,
+card.bankaccount,
+card.active,
+card.id
+FROM
+users
+INNER JOIN user_link_card ON user_link_card.user_id = users.id
+INNER JOIN card ON card.id = user_link_card.card_id
+WHERE
+users.id = ".$_SESSION["SESS_USERID"]." 
+AND
+card_id = ".$cardid;
+$selected_card_array=$db->SelectQueryArray($SQL_card_data);
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -60,7 +115,11 @@
           </div>
         </div>
       </div>
-      
+      <footer class="footer">
+        <div class="container text-center">
+          <span class="text-muted ">&copy; Payten Hackaton 2018</span>
+        </div>
+      </footer>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     </body>
 </html>

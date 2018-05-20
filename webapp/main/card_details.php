@@ -6,7 +6,7 @@
                                        </div>
                                        <div class="row">
                                            <div class="col-12 text-right">
-                                               PetarMastercard3456
+                                               <?php echo $selected_card_array[0]['cardname'];?>
                                            </div>
                                        </div>
                                        <div class="row">
@@ -16,7 +16,7 @@
                                        </div>
                                        <div class="row">
                                            <div class="col-12 text-right">
-                                               275-00000000000-27
+                                               <?php echo $selected_card_array[0]['bankaccount'];?>
                                            </div>
                                        </div>
                                        <div class="row">
@@ -26,7 +26,7 @@
                                        </div>
                                        <div class="row">
                                            <div class="col-12 text-right">
-                                               5412 75** **** 3456
+                                               <?php echo $selected_card_array[0]['cardnumber'];?>
                                            </div>
                                        </div>
                                        <div class="row">
@@ -36,7 +36,7 @@
                                        </div>
                                        <div class="row">
                                            <div class="col-12 text-right">
-                                                01/20
+                                                <?php echo $selected_card_array[0]['expdate'];?>
                                            </div>
                                        </div>                                       
                                    </div>
