@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,6 +34,7 @@ public class EnrollCard extends AppCompatActivity {
     private NfcAdapter mAdapter;
     private PendingIntent mPendingIntent;
     private AlertDialog mDialog;
+    private Button btnMainMenu;
 
     private static final String TAG = "Verification";
     @Override
@@ -59,8 +61,20 @@ public class EnrollCard extends AppCompatActivity {
 //            iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_share_master_square));
 //            iv.setVisibility(View.GONE);
 
-
         }
+
+        btnMainMenu = findViewById(R.id.btnMainMenu);
+        btnMainMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainMenu = new Intent(EnrollCard.this, MainMenu.class);
+                mainMenu.putExtra("STATUS", 1);
+                startActivity(mainMenu);
+                finish();
+            }
+        });
+
+
 
         resolveIntent(getIntent());
 
@@ -139,7 +153,6 @@ public class EnrollCard extends AppCompatActivity {
             }
         });
         builder.create().show();
-        return;
     }
 
     /**NFC je otkrio karticu

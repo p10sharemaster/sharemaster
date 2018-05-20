@@ -25,6 +25,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -71,8 +73,8 @@ public class MainMenu extends AppCompatActivity {
             mActionBar.setCustomView(mCustomView);
             mActionBar.setDisplayShowCustomEnabled(true);
 
-            ImageView iv = mCustomView.findViewById(R.id.ivLogo);
-            iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_launcher));
+//            ImageView iv = mCustomView.findViewById(R.id.ivLogo);
+//            iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_launcher));
 
             ImageButton btnBack = mCustomView.findViewById(R.id.btnBack);
             btnBack.setVisibility(View.INVISIBLE);
@@ -106,6 +108,9 @@ public class MainMenu extends AppCompatActivity {
                case 3:
                    tvAmount.setText("3,500.00 EUR");
                    break;
+               case 4:
+                   tvAmount.setText("0 EUR");
+                   break;
                default:
                    break;
 
@@ -131,7 +136,8 @@ public class MainMenu extends AppCompatActivity {
                     case 3:
                         openAlertDialog();
                         break;
-
+                    case 4:
+                        openAlertDialogNotEnoughMoney();
                     default:
                         break;
 
@@ -164,32 +170,6 @@ public class MainMenu extends AppCompatActivity {
 
 
     private void setListenersForAdditionalBenefits() {
-
-//        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-//            @Override
-//            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-//                switch (groupPosition) {
-//
-//                    case 0:
-//                        Toast.makeText(context, "Money transfer", Toast.LENGTH_LONG).show();
-//                        break;
-//                    case 1:
-//                        Toast.makeText(context, "Instant cash", Toast.LENGTH_LONG).show();
-//                        break;
-//                    case 2:
-//
-//                        break;
-//                    case 3:
-//                        Intent cupons = new Intent(MainMenu.this, Cupons.class);
-//                        startActivity(cupons);
-//                        break;
-//                    default:
-//                        break;
-//                }
-//
-//                return false;
-//            }
-//        });
 
         //region Listview Group expanded listener
         expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
@@ -274,11 +254,14 @@ public class MainMenu extends AppCompatActivity {
 
                     alertDialog.cancel();
 
-                    if(status == 2)
+                    if(status == 2) {
                         tvAmount.setText("0 EUR");
-                    else
+                        status = 4;
+                    }
+                    else {
                         tvAmount.setText("1,000.00 EUR");
-
+                        status = 1;
+                    }
 
                 }
             });
@@ -288,6 +271,54 @@ public class MainMenu extends AppCompatActivity {
             alertDialog.show();
 
 
+//        final Timer t = new Timer();
+//        t.schedule(new TimerTask() {
+//            public void run() {
+//                if(alertDialog.isShowing())
+//                {
+//                    if(status == 2)
+//                        tvAmount.setText("0 EUR");
+//                    else
+//                        tvAmount.setText("1,000.00 EUR");
+//                }
+//                alertDialog.dismiss(); // when the task active then close the dialog
+//                t.cancel(); // also just top the timer thread, otherwise, you may receive a crash report
+//            }
+//        }, 2000);
+
+    }
+
+    private void openAlertDialogNotEnoughMoney()
+    {
+        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(MainMenu.this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.alert_dialog_not_enough_money, null);
+
+        dialogBuilder.setView(dialogView);
+
+        final AlertDialog alertDialog = dialogBuilder.create();
+
+        ImageButton ibSuccess = dialogView.findViewById(R.id.ibSuccess);
+        ibSuccess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                alertDialog.cancel();
+            }
+        });
+
+        dialogBuilder.setCancelable(true);
+
+        alertDialog.show();
+
+
+//        final Timer t = new Timer();
+//        t.schedule(new TimerTask() {
+//            public void run() {
+//                alertDialog.dismiss(); // when the task active then close the dialog
+//
+//            }
+//        }, 2000);
     }
 
 }

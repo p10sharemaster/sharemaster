@@ -36,8 +36,8 @@ public class UnsuccessfulPayment extends AppCompatActivity {
             mActionBar.setCustomView(mCustomView);
             mActionBar.setDisplayShowCustomEnabled(true);
 
-            ImageView iv = mCustomView.findViewById(R.id.ivLogo);
-            iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_launcher));
+//            ImageView iv = mCustomView.findViewById(R.id.ivLogo);
+//            iv.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_launcher));
 
             ImageButton btnBack = mCustomView.findViewById(R.id.btnBack);
             btnBack.setVisibility(View.INVISIBLE);

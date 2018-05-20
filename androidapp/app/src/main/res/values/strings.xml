@@ -6,12 +6,15 @@
     <string name="main_menu">Main menu</string>
     <string name="set_card">Just put your Master credit card on a back of a phone to enroll it.</string>
     <string name="open_account_description">If you do not have a Master card open a new account in a few steps.</string>
-    <string name="back">Nazad</string>
-    <string name="logo">Share Master</string>
+    <string name="back">BACK</string>
+    <string name="logo">ShareMaster</string>
     <string name="nfc_disabled">NFC is disabled.</string>
     <string name="empty_string"> </string>
     <string name="card">Card</string>
     <string name="enter_PIN">Enter PIN number you got on your cell phone number</string>
     <string name="use_finger">Or use your finger to authenticate yourself.</string>
     <string name="yes">CONFIRM PIN</string>
+    <string name="action_bar">ShareMaster Wallet</string>
+    <string name="no_success">No success!</string>
+    <string name="cancel">Cancel</string>
 </resources>

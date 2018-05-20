@@ -16,11 +16,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class AuthoriseYourCard extends AppCompatActivity {
 
     Button btnConfirmPIN;
     EditText etPIN;
     Context context;
+    ImageButton ibFinger;
 
     int status = 0;
 
@@ -68,27 +72,19 @@ public class AuthoriseYourCard extends AppCompatActivity {
             }
         });
 
+        ibFinger = findViewById(R.id.ibFinger);
+        ibFinger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAlertDialog();
+            }
+        });
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         if (extras != null) {
             status = intent.getIntExtra("AUTHORISE", 1);
-//
-//            switch (status)
-//            {
-//                case 1:
-//
-//                    break;
-//                case 2:
-//
-//                    break;
-//                case 3:
-//
-//                    break;
-//                default:
-//                    break;
-//
-//            }
+
         }
     }
 
@@ -134,6 +130,34 @@ public class AuthoriseYourCard extends AppCompatActivity {
             dialogBuilder.setCancelable(true);
 
             alertDialog.show();
+
+//            final Timer t = new Timer();
+//            t.schedule(new TimerTask() {
+//                public void run() {
+//                    if(alertDialog.isShowing())
+//                    {
+//                        if(status == 1)
+//                        {
+//                            Intent mainMenu = new Intent(AuthoriseYourCard.this, MainMenu.class);
+//                            mainMenu.putExtra("STATUS", 1);
+//                            startActivity(mainMenu);
+//                            finish();
+//                        }
+//                        else
+//                        {
+//                            Intent unsuccessful = new Intent(AuthoriseYourCard.this, UnsuccessfulPayment.class);
+//                            startActivity(unsuccessful);
+//                            finish();
+//
+//                            //status = 2;
+//                        }
+//                    }
+//                    alertDialog.dismiss(); // when the task active then close the dialog
+//
+//
+//                    t.cancel(); // also just top the timer thread, otherwise, you may receive a crash report
+//                }
+//            }, 2000);
 
         }
         else

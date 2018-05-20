@@ -83,10 +83,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_gray"
-        android:contentDescription="@string/set_card"
+        android:contentDescription="@string/cancel"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:text="CANCEL"
-        android:textColor="@color/white" />
+        android:text="@string/cancel"
+        android:textColor="@color/black" />
 
 </LinearLayout>
